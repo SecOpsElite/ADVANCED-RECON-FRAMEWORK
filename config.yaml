@@ -1,0 +1,57 @@
+# Configuration for the Advanced Python Recon Tool
+
+# --- API Keys (Optional but Recommended) ---
+# Define API keys here or use environment variables (preferred for security)
+# The application will check environment variables first.
+api_keys:
+  github_token: "" # Or set GITHUB_TOKEN environment variable
+
+# --- Tool Paths (Optional - only if not in system PATH) ---
+# Example: tool_paths:
+#            nuclei: /opt/nuclei/nuclei
+#            httpx: /home/user/go/bin/httpx
+tool_paths:
+  gh: gh
+  git: git
+  gitleaks: gitleaks
+  trufflehog: trufflehog
+  subfinder: subfinder
+  httpx: httpx
+  naabu: naabu
+  gau: gau
+  gowitness: gowitness
+  nuclei: nuclei
+  trivy: trivy
+  # Add other tools if needed
+
+# --- Default Scan Options ---
+# These can be overridden by user selections in the UI
+defaults:
+  nuclei_templates: "technologies,cves,misconfiguration,vulnerabilities"
+  nuclei_exclusions: "info,misc"
+  naabu_ports: "top-100" # e.g., "top-100", "top-1000", "80,443,8080"
+  httpx_threads: 50
+  gau_threads: 5
+  gowitness_threads: 5
+  # Add other default flags or settings for tools
+
+# --- Output Settings ---
+base_output_directory: "./adv_recon_results" # Base directory for all scans
+
+# --- Feature Flags (Internal - control optional steps) ---
+# Generally controlled via UI, but can be disabled globally here if needed
+features:
+  enable_dorking: true
+  enable_cloning: true
+  enable_secrets: true
+  enable_trivy: true
+  enable_endpoints: true
+  enable_subdomains_code: true
+  enable_subfinder: true
+  enable_httpx: true
+  enable_naabu: true
+  enable_gau: true
+  enable_gowitness: true
+  enable_nuclei: true
+  enable_cleanup: false # Default cleanup state
+
