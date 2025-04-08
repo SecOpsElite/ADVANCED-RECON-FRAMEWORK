@@ -168,7 +168,7 @@ All juicy details are dumped with full path tracing. Scan, screenshot, exploit-r
 
 ## 🥇 CREDITS & LOVE ✨
 
-Created with passion by **Protik Sarker** — Cybersecurity Specialist
+Created with passion by **SecOpsElite** — Cybersecurity Specialist
 
 Follow and support:
 
